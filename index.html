@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pulya Booking</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WF25PCH');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</head>
+<style>
+  body{
+    background-color: #071426;
+    color:#5e81b5;
+  }
+  .btn{
+    background: #0a172b;
+    color:#293875;
+    font-weight: 700;
+    border:none;
+    box-shadow: #071426 2px;
+  }
+  .btn:hover{
+    background: #11233d;
+    color:#294875;
+    font-weight: 700;
+  }
+  .btn:active{
+    background: #1e3659;
+    color:#294875;
+    font-weight: 700;
+  }
+  input.form-control{
+   background:#1d2b40;
+   border:0px;
+   color: #ced8f0;
+ }
+ input.form-control:focus{
+   background:#1f2e50;
+   border:0px;
+   color: #ced8f0;
+ }
+  input.form-control:hover{
+   background:#1a283d;
+   border:0px;
+   color: #ced8f0;
+  }
+  select.form-control{
+   background:#1d2b40;
+   border:0px;
+   color: #ced8f0;
+ }
+  select.form-control:focus{
+   background:#1f2e50;
+   border:0px;
+   color: #ced8f0;
+ }
+  select.form-control:hover{
+   background:#1a283d;
+   border:0px;
+   color: #ced8f0;
+  }
+@media screen and (min-width: 640px){
+  .h2{
+   font-size:22pt;
+ }
+  .h3{
+    font-size:22pt;
+  }
+ input.form-control{
+  height:30pt;
+  font-size:20pt;
+ }
+ input.form-check-input[id=pool]{
+  height:22pt;
+  width:22pt;
+  margin-bottom:13pt;
+  padding-right:3pt;
+ }
+ input.form-check-input[id=piramid]{
+  height:22pt;
+  width:22pt;
+  margin-top:13pt;
+  padding-right:3pt;
+ }
+ label.form-check-label[for=pool]{
+  font-size:19pt;
+  font-weight:bold;
+  padding-left:12pt;
+  padding-bottom:10pt;
+ }
+ label.form-check-label[for=piramid]{
+  font-size:19pt;
+  font-weight:bold;
+  padding-left:12pt;
+  padding-top:10pt;
+ }
+ input.btn{
+  text-align: center;
+  height:40pt;
+  font-size:13pt;
+ }
+}
+@media screen and (min-width: 720px){
+  .h2{
+   font-size:28pt;
+ }
+  .h3{
+    font-size:25pt;
+    padding-bottom:12pt;
+  }
+ input.form-control{
+  height:42pt;
+  font-size:24pt;
+ }
+ input.form-check-input[id=pool]{
+  height:25pt;
+  width:25pt;
+  margin-top:-5pt;
+  padding-right:3pt;
+ }
+ input.form-check-input[id=piramid]{
+  height:25pt;
+  width:25pt;
+  margin-top:-pt;
+  padding-right:3pt;
+ }
+ label.form-check-label[for=pool]{
+  font-size:21pt;
+  font-weight:bold;
+  padding-left:12pt;
+  padding-bottom:10pt;
+  margin-top:-18pt;
+ }
+ label.form-check-label[for=piramid]{
+  font-size:21pt;
+  font-weight:bold;
+  padding-left:12pt;
+  padding-top:10pt;
+ }
+ input.btn{
+  text-align: center;
+  height:60pt;
+  font-size:23pt;
+ }
+}
+@media(min-width: 1080px){
+  .h2{
+   font-size:45pt;
+ }
+  .h3{
+    font-size:37pt;
+    padding-bottom:12pt;
+  }
+ input.form-control{
+  height:60pt;
+  font-size:24pt;
+ }
+ input.form-check-input[id=pool]{
+  height:28pt;
+  width:28pt;
+  margin-top:-9pt;
+  padding-right:6pt;
+ }
+ input.form-check-input[id=piramid]{
+  height:28pt;
+  width:28pt;
+  margin-top:19pt;
+  padding-right:6pt;
+ }
+ label.form-check-label[for=pool]{
+  font-size:29pt;
+  font-weight:bold;
+  padding-left:18pt;
+  padding-bottom:17pt;
+  margin-top:-18pt;
+ }
+ label.form-check-label[for=piramid]{
+  font-size:29pt;
+  font-weight:bold;
+  padding-left:18pt;
+  padding-top:10pt;
+ }
+ input.btn{
+  text-align: center;
+  height:80pt;
+  font-size:29pt;
+ }
+}
+@media screen and (min-height: 1080px){
+  .h2{
+   font-size:63pt;
+ }
+  .h3{
+    font-size:50pt;
+    padding-bottom:22pt;
+  }
+ input.form-control{
+  height:90pt;
+  font-size:32pt;
+ }
+ input.form-check-input[id=pool]{
+  height:34pt;
+  width:34pt;
+  margin-top:-9pt;
+  padding-right:6pt;
+ }
+ input.form-check-input[id=piramid]{
+  height:34pt;
+  width:34pt;
+  margin-top:19pt;
+  padding-right:6pt;
+ }
+ label.form-check-label[for=pool]{
+  font-size:34pt;
+  font-weight:bold;
+  padding-left:18pt;
+  padding-bottom:17pt;
+  margin-top:-18pt;
+ }
+ label.form-check-label[for=piramid]{
+  font-size:34pt;
+  font-weight:bold;
+  padding-left:18pt;
+  padding-top:10pt;
+  padding-bottom:10pt;
+ }
+ input.btn{
+  text-align: center;
+  height:90pt;
+  width:315pt;
+  font-size:32pt;
+ }
+}
+</style>
+<body>  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF25PCH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container-fluid">
+      <form name="data-form" id="datF">
+        <p class = "h2">Бронирование стола</p>
+          <div class="form-group">
+            <input type = "text" id="name" class="form-control" placeholder="Имя">
+          </div>    
+          <div class="form-group">
+            <p class="h3">Выбор стола:</p>
+            <div class="form-check">
+              <input type="radio" id="pool" name="table" class="form-check-input">
+              <label class="form-check-label" for="pool">Пул</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="piramid" name="table" class="form-check-input">
+              <label class="form-check-label" for="piramid">Русская пирамида</label>
+            </div>
+          </div> 
+          <div class="form-group">
+            <input type="date" id="date" class="form-control" placeholder="Дата">
+          </div>
+          <div class="form-group">
+            <input type="time" id="time" class="form-control" placeholder="Время">
+          </div>
+          <div class="input-group">
+            <select class="form-control custom-select" id="customSelect">
+              <option selected value="none">Количество часов...</option>
+              <option value="1">1 час</option>
+              <option value="2">2 часа</option>
+              <option value="3">3 часа</option>
+              <option value="4">4 часа</option>
+              <option value="5">5 часов</option>
+              <option value="6">6 часов</option>
+              <option value="7">7 часов</option>
+              <option value="8">8 часов</option>
+            </select>
+          </div><br>
+        </form>
+          <input type="submit" id="btn" class="btn btn-primary" value="Подтвердить">
+    </div>
+<script>
+   btn.onclick = function(){
+ var name=document.getElementById("name").value,
+        date=document.getElementById("date").value,table,r1,r2,
+        time=document.getElementById("time").value,
+        rad1=document.getElementById("pool"),
+        rad2=document.getElementById("piramid"),
+        duration=document.getElementById("customSelect").value,
+        r1=rad1.checked,r2=rad2.checked;
+
+    nameVer=function(){
+      if(name==""){
+        return name='none';
+      }else{
+        return secName=name, name=`указано имя: ${name}`;
+      }
+    }
+
+    timeVer=function(){
+      if(time==""){
+        return time='none';
+      }else{
+        return secTime=time, time=`на время: ${time}`;
+      }
+    }
+
+    dateVer=function(){
+      if(date==""){
+        return date='none';
+      }else{
+        return secDate=date, date=`Выбранная дата: ${date}`;
+      }
+    }   
+
+    getTable=function(){
+        if(r1==true){
+          return table='Пул';
+        }else if(r2==true){
+          return table='Пирамида';
+        }else{
+          return table='none';
+        }
+    }
+    durationVer=function(){
+        if(duration=='none'){
+         return duration='none';
+        }else{
+         return duration;
+        }
+    }
+    
+    run=function(){
+      if(name!='none'){
+         if(table!=='none'){
+            if(date!='none'){
+               if(time!='none'){
+                 if(duration!='none'){
+
+            fetch(`https://hook.eu1.make.com/76i6v5hv1hwpbccifvqslga7h4m4r0gt?name=${secName}&date=${secDate}&time=${secTime}&table=${table}&duration=${duration}`)
+            .then(response=>{
+              if(response.status==220){
+                fetch(`https://api.telegram.org/bot5743621724:AAErCluP0nFuZKwp8vTDw7gy6bjKWCrCEug/sendMessage?chat_id=-891328291&text=Поступил заказ: Указанное имя: ${name}. Выбранный стол: ${table}. ${date} ${time}. На ${duration}`)
+            .catch(err=>alert(`1`+err));
+              alert('Забронировано');
+              }else{
+                alert('Время занято');
+              }
+            })
+     .catch(err=>alert(`2`+err));
+                  }else{
+                    alert('Продолжительность не выбрана');
+                  }
+               }else{
+                alert('Время не выбрано!');
+               }
+            }else{
+              alert('Дата не выбрана!');
+            }
+         }else{
+          alert('Стол не выбран!');
+         }
+      }else{
+        alert('Укажите имя!');
+      }
+    }
+getTable();
+
+nameVer();
+
+timeVer();
+
+dateVer();
+
+durationVer();
+
+run();
+
+  }
+</script>
+</body>
+  </html>
+
